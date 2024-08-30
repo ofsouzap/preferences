@@ -1,71 +1,61 @@
 {
-    "git.ignoreMissingGitWarning": true,
-    "vscode-pets.petSize": "medium",
-    "notebook.lineNumbers": "on",
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "cmake.configureEnvironment": {
-        "PICO_SDK_PATH": "..\\..\\pico-sdk"
-    },
-    "cmake.configureOnOpen": true,
-    "editor.renderWhitespace": "trailing",
-    "remote.SSH.remotePlatform": {
-        "cameron.rpi": "linux",
-        "scampi.rpi": "linux",
-        "10.4.0.158": "linux"
-    },
-    "git.autofetch": true,
-    "Lua.telemetry.enable": false,
-    "ocaml.dune.autoDetect": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "editor.accessibilitySupport": "off",
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "workbench.startupEditor": "none",
-    "C_Cpp.commentContinuationPatterns": [
-        "/**"
-    ],
-    "doxdocgen.generic.authorEmail": "ofsouzap@gmail.com",
-    "doxdocgen.generic.authorName": "Ofsouzap",
-    "C_Cpp.autocompleteAddParentheses": true,
-    "gitlens.codeLens.enabled": false,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    },
-    "react-native-tools.showUserTips": false,
-    "codesnap.roundedCorners": false,
-    "codesnap.showWindowControls": false,
-    "codesnap.shutterAction": "copy",
-    "codesnap.realLineNumbers": true,
-    "workbench.colorTheme": "Default Dark+",
-    "redhat.telemetry.enabled": false,
-    "git.confirmSync": false,
-    "githubPullRequests.pullBranch": "never",
-    "haskell.manageHLS": "GHCup",
-    "files.trimTrailingWhitespace": true,
-    "editor.unicodeHighlight.allowedCharacters": {
-        "σ": true
-    },
-    "git.suggestSmartCommit": false,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "cmake.showOptionsMovedNotification": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "git.openRepositoryInParentFolders": "never",
     "[haskell]": {
         "editor.tabSize": 2
     },
-    "todo-tree.regex.regex": "(--|//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "cmake.configureOnOpen": true,
+    "cmake.showOptionsMovedNotification": false,
+    "editor.accessibilitySupport": "off",
+    "editor.formatOnType": true,
+    "editor.renderWhitespace": "trailing",
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.ignoreMissingGitWarning": true,
     "git.ignoreRebaseWarning": true,
-    "window.customTitleBarVisibility": "auto",
+    "git.openRepositoryInParentFolders": "never",
+    "git.suggestSmartCommit": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.launchpad.indicator.enabled": false,
+    "haskell.manageHLS": "GHCup",
+    "notebook.lineNumbers": "on",
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "todo-tree.regex.regex": "(--|//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.foldfix": true,
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+    "vim.hlsearch": true,
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "<C-e>"
+            ],
+            "before": [
+                "E"
+            ]
+        },
+        {
+            "after": [
+                "<C-y>"
+            ],
+            "before": [
+                "Y"
+            ]
+        }
+    ],
+    "vscode-pets.petSize": "medium",
     "window.commandCenter": false,
+    "window.customTitleBarVisibility": "auto",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.layoutControl.enabled": false,
-    "githubPullRequests.createOnPublishBranch": "never"
+    "workbench.startupEditor": "none"
 }
