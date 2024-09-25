@@ -1,5 +1,6 @@
 -- Color scheme
 vim.cmd("colorscheme slate")
+vim.cmd("highlight MatchParen guifg=#d7d787 guibg=#333333")
 
 -- Line numbering
 vim.opt.number = true
@@ -144,12 +145,6 @@ local plugins = {
         -- nvim-treesitter
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
-    },
-    {
-        -- autopairs
-        'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        config = true
     }
 }
 
@@ -215,36 +210,6 @@ vim.keymap.set('n', '<leader>gi', telescope_builtin.lsp_implementations, {})
 vim.keymap.set('n', '<leader>gr', telescope_builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>e', telescope_builtin.diagnostics, {})
 
--- -- Set up nvim-autopairs
-
-do
-    local autopairs = require("nvim-autopairs")
-    local Rule = require("nvim-autopairs.rule")
-    local cond = require("nvim-autopairs.conds")
-
-    autopairs.setup({
-        disable_filetype = { "TelescopePrompt", "vim" },
-        fast_wrap = {},
-    })
-
-    autopairs.get_rules("'")[1].not_filetypes = { "ocaml", "rust" }
-
-    autopairs.add_rules({
-        Rule("struct", "end", "ocaml")
-            :end_wise(function(opts)
-                return string.match(opts.line, "^%s*module") ~= nil
-            end),
-        Rule("sig", "end", "ocaml")
-            :end_wise(function(opts)
-                return string.match(opts.line, "^%s*module%s+type") ~= nil
-            end),
-        Rule("<", ">", { "rust" })
-            :with_pair(cond.before_regex("%w", 1)),
-        Rule("'", "'", { "rust" })
-            :with_pair(cond.not_before_text("<"))
-            :with_pair(cond.not_before_text("&")),
-    })
-end
 
 -- LSP
 -- (must be after mason and mason-lspconfig)
