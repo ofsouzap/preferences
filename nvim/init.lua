@@ -145,6 +145,14 @@ local plugins = {
         -- nvim-treesitter
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
+    },
+    {
+        -- VimTeX
+        "lervag/vimtex",
+        lazy = false,
+        init = function()
+            vim.g.vimtex_view_method = "zathura"
+        end
     }
 }
 
