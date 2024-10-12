@@ -10,6 +10,7 @@
     "cmake.showOptionsMovedNotification": false,
     "editor.accessibilitySupport": "off",
     "editor.formatOnType": true,
+    "editor.formatOnSave": true,
     "editor.renderWhitespace": "trailing",
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
@@ -57,5 +58,6 @@
     "window.customTitleBarVisibility": "auto",
     "workbench.colorTheme": "Default Dark+",
     "workbench.layoutControl.enabled": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "githubPullRequests.createOnPublishBranch": "never"
 }
