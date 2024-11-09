@@ -1,6 +1,7 @@
 alias rup='rustup'
 alias swipl='swi-prolog.swipl'
 alias vim='nvim'
+alias julia-pluto='julia -e "import Pluto; Pluto.run()"'
 
 # Git shortcuts
 
@@ -9,6 +10,7 @@ alias g='git'
 alias gad='git add'
 alias glg='git log'
 alias gstat='git status'
+alias gst='git status'
 
 
 function gomp() {
