@@ -147,6 +147,12 @@ local plugins = {
         build = ":TSUpdate",
     },
     {
+        -- autopairs
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
+    {
         -- VimTeX
         "lervag/vimtex",
         lazy = false,
