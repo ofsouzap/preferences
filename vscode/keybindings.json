@@ -41,5 +41,15 @@
         "command": "workbench.action.focusActiveEditorGroup",
         "key": "ctrl+alt+c",
         "when": "!editorTextFocus"
-    }
+    },
+    {
+        "key": "ctrl+shift+alt+c",
+        "command": "workbench.action.chat.openEditSession",
+        "when": "chatEditingParticipantRegistered && chatIsEnabled && view != 'workbench.panel.chat.view.edits'"
+    },
+    {
+        "command": "workbench.action.focusActiveEditorGroup",
+        "key": "ctrl+alt+shift+c",
+        "when": "!editorTextFocus"
+    },
 ]
