@@ -52,6 +52,14 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 
+#######################
+## Set screen layout ##
+#######################
+
+
+exec_always --no-startup-id /home/paul/.screenlayout/default.sh
+
+
 ####################
 ### Keybindiings ###
 ####################
