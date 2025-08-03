@@ -1,0 +1,16 @@
+general {
+    output_format = "i3bar"
+    colors = true
+}
+
+order += "battery 0"
+order += "tztime local"
+
+battery 0 {
+    format = "Battery: %status %percentage"
+}
+
+tztime local {
+    format = "%H:%M:%S %d-%m-%Y"
+}
+
