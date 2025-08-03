@@ -65,5 +65,6 @@
     ],
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": false,
-    "githubPullRequests.pullBranch": "never"
+    "githubPullRequests.pullBranch": "never",
+    "github.copilot.nextEditSuggestions.enabled": true
 }
