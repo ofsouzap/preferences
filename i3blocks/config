@@ -70,9 +70,21 @@ signal=10
 label=⚡
 interval=30
 
+# Weather
+
+[weather]
+command=$HOME/.config/i3blocks/custom-scripts/weather
+interval=300
+
 # Date Time
-#
+
+[date]
+label=
+command=date '+%Y-%m-%d'
+interval=30
+
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+label=
+command=date '+%H:%M:%S'
 interval=1
 
