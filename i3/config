@@ -59,11 +59,13 @@ tiling_drag modifier titlebar
 
 
 # Set keyboard layout
-# exec --no-startup-id setxkbmap gb
-exec --no-startup-id setxkbmap us
+# Seems to be some race condition problem here, so I'm making this happen only after a short delay
 
-# Swap Caps Lock and Escape
-exec --no-startup-id setxkbmap -option caps:swapescape
+exec --no-startup-id sh -c "sleep 1 && setxkbmap -layout us"
+
+# Swap caps lock and escape
+
+exec --no-startup-id "setxkbmap -option caps:swapescape"
 
 
 ####################
@@ -94,6 +96,8 @@ bindsym $mod+x exec "i3lock --nofork"
 # Custom shortcuts
 
 bindsym $mod+n exec "google-chrome"
+
+bindsym $mod+Shift+d exec "$HOME/.config/i3/scripts/display-layout-selector.sh"
 
 # Navigation, containers and workspaces
 
