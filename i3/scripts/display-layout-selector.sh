@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf "Monitor (Home)\nLaptop\n" | rofi -dmenu -p "Display Layout")
+choice=$(printf "Monitor (Home)\nLaptop\n" | rofi -i -dmenu -p "Display Layout")
 
 case "$choice" in
     "Monitor (Home)")
