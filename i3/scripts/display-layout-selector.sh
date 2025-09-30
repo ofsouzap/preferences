@@ -5,6 +5,9 @@ choice=$(printf "Monitor (Home)\nLaptop\n" | rofi -i -dmenu -p "Display Layout")
 case "$choice" in
     "Monitor (Home)")
         "$HOME/.config/i3/screenlayouts/monitor-home.sh"
+        i3-msg "workspace 1; move workspace to output HDMI-A-0"
+        i3-msg "workspace 2; move workspace to output eDP"
+        i3-msg "workspace 1; focus"
         ;;
     "Laptop")
         "$HOME/.config/i3/screenlayouts/laptop-only.sh"
