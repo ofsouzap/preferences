@@ -2,6 +2,9 @@
     "[haskell]": {
         "editor.tabSize": 2
     },
+    "[ocaml]": {
+        "editor.tabSize": 2,
+    },
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
@@ -66,5 +69,6 @@
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": false,
     "githubPullRequests.pullBranch": "never",
-    "github.copilot.nextEditSuggestions.enabled": true
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false
 }
