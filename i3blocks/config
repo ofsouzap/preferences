@@ -56,8 +56,7 @@ signal=11
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-label=Vol
-# label=♪
+label=🔈
 instance=Master
 interval=once
 signal=10
@@ -66,7 +65,6 @@ signal=10
 #
 # The battery instance defaults to 0.
 [battery]
-# label=BAT
 label=⚡
 interval=30
 
@@ -84,12 +82,12 @@ interval=300
 # Date Time
 
 [date]
-label=
+label=🗓️
 command=date '+%Y-%m-%d'
 interval=30
 
 [time]
-label=
+label=🕓
 command=date '+%H:%M:%S'
 interval=1
 
