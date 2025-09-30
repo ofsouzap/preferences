@@ -1,5 +1,18 @@
 #!/bin/bash
 
+if [ "$BLOCK_BUTTON" -eq 1 ]
+then
+    # left click will cycle between these hard-coded layouts
+    current=$(setxkbmap -query | awk '/layout/ {print $2}')
+
+    if [ "$current" = "us" ]
+    then
+        setxkbmap -layout gb
+    else
+        setxkbmap -layout us
+    fi
+fi
+
 layout=$(setxkbmap -query | awk '/layout/ {print $2}')
 echo "$layout"
 
