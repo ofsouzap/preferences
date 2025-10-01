@@ -20,6 +20,14 @@
 # signal
 # urgent
 
+# List of signals used
+# ====================
+#
+# 10 - volume
+# 11 - caps lock and num lock
+# 12 - media player
+# 13 - brightness
+
 # Global properties
 #
 # The top properties below are applied to every block, but can be overridden.
@@ -36,7 +44,7 @@ markup=none
 label=♪
 instance=spotify
 interval=5
-signal=10
+signal=12
 
 # Key indicators
 
@@ -60,6 +68,13 @@ label=🔈
 instance=Master
 interval=once
 signal=10
+
+# Brightness indicator
+[brightness]
+command=$HOME/.config/i3blocks/custom-scripts/brightness
+interval=5
+label=B
+signal=13
 
 # Battery indicator
 #

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+max=$(brightnessctl max)
+brightness=$(brightnessctl get)
+
+# Note, this uses integer arithmetic, and so will round to an integer
+percentage=$(( brightness * 100 / max ))
+
+echo "${percentage}%"
+
