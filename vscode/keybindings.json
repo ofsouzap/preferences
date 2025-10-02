@@ -52,4 +52,8 @@
         "key": "ctrl+alt+shift+c",
         "when": "!editorTextFocus"
     },
+    {
+        "command": "extension.vim_escape",
+        "key": "capslock"
+    }
 ]

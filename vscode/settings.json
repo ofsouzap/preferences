@@ -70,5 +70,17 @@
     "julia.enableTelemetry": false,
     "githubPullRequests.pullBranch": "never",
     "github.copilot.nextEditSuggestions.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.indentSize": "tabSize",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "TODO-someday",
+        "TODO-soon"
+    ]
 }
