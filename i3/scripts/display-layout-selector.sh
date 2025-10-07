@@ -14,3 +14,6 @@ case "$choice" in
         ;;
 esac
 
+# I configure the keyboard mapping here as I'll often run this script on first starting my PC
+setxkbmap -layout us -option caps:swapescape
+

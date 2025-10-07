@@ -67,12 +67,6 @@ tiling_drag modifier titlebar
 #########################
 
 
-# Set keyboard layout and swap caps lock and escape
-# Seems to be some race condition problem here, so I'm making this happen only after a short delay
-
-exec --no-startup-id sh -c "sleep 1 && setxkbmap -layout us -option caps:swapescape"
-
-
 # Send signals on caps and num lock to refresh status bar entries
 
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
