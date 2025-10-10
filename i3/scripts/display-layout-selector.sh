@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf "Monitor (Home)\nLaptop\n" | rofi -i -dmenu -p "Display Layout")
+choice=$(printf "Monitor (Home)\nLaptop (Normal)\nLaptop (Zoomed 2x2)\n" | rofi -i -dmenu -p "Display Layout")
 
 case "$choice" in
     "Monitor (Home)")
@@ -9,8 +9,11 @@ case "$choice" in
         i3-msg "workspace 2; move workspace to output eDP"
         i3-msg "workspace 1; focus"
         ;;
-    "Laptop")
+    "Laptop (Normal)")
         "$HOME/.config/i3/screenlayouts/laptop-only.sh"
+        ;;
+    "Laptop (Zoomed 2x2)")
+        "$HOME/.config/i3/screenlayouts/laptop-only-zoomed-2x2.sh"
         ;;
 esac
 
