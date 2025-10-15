@@ -200,6 +200,10 @@ bindsym $mod+Ctrl+h move workspace to output left
 bindsym $mod+Ctrl+l move workspace to output right
 bindsym $mod+Ctrl+k move workspace to output up
 bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
