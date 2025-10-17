@@ -83,15 +83,10 @@
         "TODO-someday",
         "TODO-soon"
     ],
+    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipes": [
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
-        },
         {
             "name": "latexmk",
             "tools": [
