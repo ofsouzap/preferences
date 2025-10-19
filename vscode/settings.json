@@ -34,7 +34,9 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "vim.foldfix": true,
     "vim.handleKeys": {
-        "<C-p>": false
+        "<C-p>": false,
+        "<C-f>": false,
+        "<C-h>": false
     },
     "vim.hlsearch": true,
     "vim.leader": "<Space>",
@@ -105,5 +107,12 @@
                 "%DOC%"
             ]
         }
-    ]
+    ],
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "latex": false
+    }
 }
