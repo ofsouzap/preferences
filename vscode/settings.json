@@ -113,6 +113,7 @@
         "plaintext": false,
         "markdown": false,
         "scminput": false,
-        "latex": false
-    }
+        "latex": true
+    },
+    "terminal.integrated.inheritEnv": false
 }
