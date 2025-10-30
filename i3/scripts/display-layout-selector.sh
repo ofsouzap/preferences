@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf "Monitor (Home)\nLaptop (Normal)\nLaptop (Zoomed 0.7x0.7)\n" | rofi -i -dmenu -p "Display Layout")
+choice=$(printf "Monitor (Home)\nLaptop (Normal)\nLaptop (Zoomed 0.7x0.7)\nLaptop (Zoomed 0.5x0.5)\n" | rofi -i -dmenu -p "Display Layout")
 
 case "$choice" in
     "Monitor (Home)")
@@ -14,6 +14,9 @@ case "$choice" in
         ;;
     "Laptop (Zoomed 0.7x0.7)")
         "$HOME/.config/i3/screenlayouts/laptop-only-zoomed-0.7x0.7.sh"
+        ;;
+    "Laptop (Zoomed 0.5x0.5)")
+        "$HOME/.config/i3/screenlayouts/laptop-only-zoomed-0.5x0.5.sh"
         ;;
 esac
 
