@@ -1,0 +1,73 @@
+// List of signals used
+// ====================
+//
+// 10 - volume
+// 11 - caps lock and num lock
+// 12 - media player
+// 13 - brightness
+
+{
+  // TODO - separators and unicode icons/symbols
+  // TODO - alternative to i3's signals that allow me to immediately refresh a block
+
+  "layer": "top",
+  "position": "bottom",
+  "height": 29,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-right": [
+    "custom/mediaplayer",
+    "custom/volume",
+    "custom/brightness",
+    "battery",
+    "custom/kblayout",
+    "custom/weather",
+    "clock"
+  ],
+
+  "custom/mediaplayer": {
+    "format": "{}",
+    "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+    "interval": 5,
+    "on-click": "playerctl play-pause",
+    "signal": 12
+  },
+
+  // TODO - CAPS lock and NUM lock indicators. Use colors, preferably. Use signal 11
+
+  "custom/volume": {
+    "exec": "~/.config/waybar/custom-scripts/volume",
+    "interval": 1,
+    "format": "{}",
+    "signal": 10
+  },
+
+  "custom/brightness": {
+    "exec": "~/.config/waybar/custom-scripts/brightness",
+    "interval": 2,
+    "format": "{}",
+    "signal": 13
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+    // TODO - can this show if it is charging? Also perhaps the predicted remaining lifetime / charge time
+  },
+
+  "custom/kblayout": {
+    "format": "{}",
+    "exec": "~/.config/waybar/custom-scripts/kblayout",
+    "interval": 5
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/custom-scripts/weather",
+    "interval": 300
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d  %H:%M:%S}",
+    "interval": 1
+  }
+}
+

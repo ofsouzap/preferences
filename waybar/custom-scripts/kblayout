@@ -1,0 +1,35 @@
+#!/bin/bash
+
+get_keyboard_layout() {
+    local layout
+    layout=$(swaymsg -r -t get_inputs | jq -r '.[] | select(.type == "keyboard") | .xkb_active_layout_name' | head -n1)
+
+    case "$layout" in
+        "English (US)")
+            echo "us"
+            ;;
+        "English (GB)")
+            echo "gb"
+            ;;
+        *)
+            echo "$layout"
+            ;;
+    esac
+}
+
+# if [ "$BLOCK_BUTTON" -eq 1 ]
+# then
+#     # left click will cycle between these hard-coded layouts
+#     current=$(get_keyboard_layout)
+# 
+#     if [ "$current" = "us" ]
+#     then
+#         swaymsg input type:keyboard xkb_layout gb
+#     else
+#         swaymsg input type:keyboard xkb_layout us
+#     fi
+# fi
+
+layout=$(get_keyboard_layout)
+echo "$layout"
+
