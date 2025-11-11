@@ -21,7 +21,8 @@
     "battery",
     "custom/kblayout",
     "custom/weather",
-    "clock"
+    "clock",
+    "tray"
   ],
 
   "custom/mediaplayer": {
