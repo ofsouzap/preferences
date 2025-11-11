@@ -1,22 +1,16 @@
 #!/bin/bash
 
-choice=$(printf "Monitor (Home)\nLaptop (Normal)\nLaptop (Zoomed 0.7x0.7)\nLaptop (Zoomed 0.5x0.5)\n" | rofi -i -dmenu -p "Display Layout")
+choice=$(printf "Monitor (Home)\nLaptop (Normal)\n" | rofi -i -dmenu -p "Display Layout")
 
 case "$choice" in
     "Monitor (Home)")
-        "$HOME/.config/i3/screenlayouts/monitor-home.sh"
-        i3-msg "workspace 1; move workspace to output HDMI-A-0"
-        i3-msg "workspace 2; move workspace to output eDP"
-        i3-msg "workspace 1; focus"
+        "$HOME/.config/sway/screenlayouts/monitor-home.sh"
+        swaymsg "workspace 1; move workspace to output HDMI-A-1"
+        swaymsg "workspace 2; move workspace to output eDP"
+        swaymsg "workspace 1; focus"
         ;;
     "Laptop (Normal)")
-        "$HOME/.config/i3/screenlayouts/laptop-only.sh"
-        ;;
-    "Laptop (Zoomed 0.7x0.7)")
-        "$HOME/.config/i3/screenlayouts/laptop-only-zoomed-0.7x0.7.sh"
-        ;;
-    "Laptop (Zoomed 0.5x0.5)")
-        "$HOME/.config/i3/screenlayouts/laptop-only-zoomed-0.5x0.5.sh"
+        "$HOME/.config/sway/screenlayouts/laptop-only.sh"
         ;;
 esac
 
