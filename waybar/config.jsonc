@@ -7,9 +7,6 @@
 // 13 - brightness
 
 {
-  // TODO - separators and unicode icons/symbols
-  // TODO - alternative to i3's signals that allow me to immediately refresh a block
-
   "layer": "top",
   "position": "bottom",
   "height": 29,
@@ -26,7 +23,7 @@
   ],
 
   "custom/mediaplayer": {
-    "format": "{}",
+    "format": "{} |",
     "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
     "interval": 5,
     "on-click": "playerctl play-pause",
@@ -38,36 +35,39 @@
   "custom/volume": {
     "exec": "~/.config/waybar/custom-scripts/volume",
     "interval": 1,
-    "format": "{}",
+    "format": "🔈 {} |",
     "signal": 10
   },
 
   "custom/brightness": {
     "exec": "~/.config/waybar/custom-scripts/brightness",
     "interval": 2,
-    "format": "{}",
+    "format": "🔅 {} |",
     "signal": 13
   },
 
   "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
-    // TODO - can this show if it is charging? Also perhaps the predicted remaining lifetime / charge time
+    "format": "{icon}  {capacity}% ({time}) |",
+    "format-full": "{icon}  full |",
+    "format-charging": "⚡{icon}  {capacity}% |",
+    "format-icons": ["", "", "", "", ""],
+    "format-time": "{H}h{m}m"
   },
 
   "custom/kblayout": {
-    "format": "{}",
+    "format": "{} |",
     "exec": "~/.config/waybar/custom-scripts/kblayout",
     "interval": 5
   },
 
   "custom/weather": {
+    "format": "{} |",
     "exec": "~/.config/waybar/custom-scripts/weather",
     "interval": 300
   },
 
   "clock": {
-    "format": "{:%Y-%m-%d  %H:%M:%S}",
+    "format": "🗓️ {:%Y-%m-%d  %H:%M:%S}  ",
     "interval": 1
   }
 }
