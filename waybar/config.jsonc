@@ -49,7 +49,7 @@
   "battery": {
     "format": "{icon}  {capacity}% ({time}) |",
     "format-full": "{icon}  full |",
-    "format-charging": "⚡{icon}  {capacity}% |",
+    "format-charging": "{icon}  {capacity}% (⚡ {time}) |",
     "format-icons": ["", "", "", "", ""],
     "format-time": "{H}h{m}m"
   },
