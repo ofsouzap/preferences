@@ -166,5 +166,18 @@
         "key": "ctrl+i",
         "command": "-workbench.action.chat.holdToVoiceChatInChatView",
         "when": "chatIsEnabled && hasSpeechProvider && !chatSessionRequestInProgress && !editorFocus && !inChatInput && !inSettingsEditor && !inlineChatFocused && !notebookEditorFocused && !searchViewletFocus"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.files.saveFiles"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveLocalFile",
+        "when": "remoteFileDialogVisible"
     }
 ]
