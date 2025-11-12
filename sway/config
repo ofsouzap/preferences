@@ -233,9 +233,13 @@ bindsym $mod+r mode "resize"
 #########
 
 
-input * {
+input "type:keyboard" {
     xkb_layout "us"
     xkb_options "caps:swapescape,compose:ralt"
+}
+
+input "type:touchpad" {
+    tap enabled
 }
 
 
