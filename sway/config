@@ -240,7 +240,6 @@ input "type:keyboard" {
 
 input "type:touchpad" {
     tap enabled
-    natural_scroll enabled
 }
 
 
