@@ -5,6 +5,7 @@
 // 11 - caps lock and num lock
 // 12 - media player
 // 13 - brightness
+// 14 - kblayout
 
 {
   "layer": "top",
@@ -57,7 +58,9 @@
   "custom/kblayout": {
     "format": "{} |",
     "exec": "~/.config/waybar/custom-scripts/kblayout",
-    "interval": 5
+    "interval": 5,
+    "on-click": "~/.config/waybar/custom-scripts/kblayout cycle",
+    "signal": 14
   },
 
   "custom/weather": {

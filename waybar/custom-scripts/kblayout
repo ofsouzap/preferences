@@ -8,7 +8,7 @@ get_keyboard_layout() {
         "English (US)")
             echo "us"
             ;;
-        "English (GB)")
+        "English (UK)")
             echo "gb"
             ;;
         *)
@@ -17,19 +17,24 @@ get_keyboard_layout() {
     esac
 }
 
-# if [ "$BLOCK_BUTTON" -eq 1 ]
-# then
-#     # left click will cycle between these hard-coded layouts
-#     current=$(get_keyboard_layout)
-# 
-#     if [ "$current" = "us" ]
-#     then
-#         swaymsg input type:keyboard xkb_layout gb
-#     else
-#         swaymsg input type:keyboard xkb_layout us
-#     fi
-# fi
+if [ "$1" = "cycle" ]
+then
+    # left click will cycle between these hard-coded layouts and refresh the waybar
+    current=$(get_keyboard_layout)
+    echo "cycled"
 
-layout=$(get_keyboard_layout)
-echo "$layout"
+    if [ "$current" = "us" ]
+    then
+        swaymsg input type:keyboard xkb_layout gb
+    else
+        swaymsg input type:keyboard xkb_layout us
+    fi
+
+    pkill -RTMIN+14 waybar
+else
+    # If not cycling, just print the current layout
+    layout=$(get_keyboard_layout)
+    echo "$layout"
+fi
+
 
