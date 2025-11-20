@@ -1,7 +1,7 @@
 #!/bin/sh
 xrandr \
-    --output eDP --primary --mode 2880x1800 --pos 0x0 --rotate normal --scale 0.5x0.5 \
-    --output HDMI-A-0 --off \
+    --output eDP --mode 1920x1200 --pos 1920x122 --rotate normal --scale 1x1 \
+    --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal \
     --output DisplayPort-0 --off \
     --output DisplayPort-1 --off \
     --output DisplayPort-2 --off \
