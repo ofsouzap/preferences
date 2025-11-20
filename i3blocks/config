@@ -76,7 +76,7 @@ signal=13
 #
 # The battery instance defaults to 0.
 [battery]
-label=⚡
+command=$HOME/.config/i3blocks/custom-scripts/battery
 interval=30
 
 # Keyboard layout

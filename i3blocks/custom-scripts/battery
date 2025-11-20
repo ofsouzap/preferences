@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Path to battery info
+BAT_PATH="/sys/class/power_supply/BAT1"
+
+# Read battery status and capacity
+status=$(cat "$BAT_PATH/status")
+capacity=$(cat "$BAT_PATH/capacity")
+
+# Choose icon based on capacity
+if [ "$capacity" -ge 90 ]; then
+    icon=""
+elif [ "$capacity" -ge 70 ]; then
+    icon=""
+elif [ "$capacity" -ge 50 ]; then
+    icon=""
+elif [ "$capacity" -ge 30 ]; then
+    icon=""
+else
+    icon=""
+fi
+
+# Read time remaining (in seconds) if discharging
+if [ "$status" = "Discharging" ]
+then
+    echo "$icon  ${capacity}%"
+elif [ "$status" = "Charging" ]
+then
+    echo "$icon  ${capacity}% (⚡)"
+else
+    echo "$icon  full"
+fi
+
