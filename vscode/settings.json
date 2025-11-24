@@ -116,5 +116,6 @@
         "latex": true
     },
     "terminal.integrated.inheritEnv": false,
-    "git.blame.editorDecoration.enabled": true
+    "git.blame.editorDecoration.enabled": true,
+    "python.analysis.typeCheckingMode": "basic"
 }
