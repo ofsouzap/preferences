@@ -8,13 +8,13 @@ status=$(cat "$BAT_PATH/status")
 capacity=$(cat "$BAT_PATH/capacity")
 
 # Choose icon based on capacity
-if [ "$capacity" -ge 90 ]; then
+if [ "$capacity" -ge 80 ]; then
     icon=""
-elif [ "$capacity" -ge 70 ]; then
+elif [ "$capacity" -ge 60 ]; then
     icon=""
-elif [ "$capacity" -ge 50 ]; then
+elif [ "$capacity" -ge 40 ]; then
     icon=""
-elif [ "$capacity" -ge 30 ]; then
+elif [ "$capacity" -ge 20 ]; then
     icon=""
 else
     icon=""
