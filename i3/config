@@ -203,6 +203,8 @@ bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Up move workspace to output up
 bindsym $mod+Ctrl+Down move workspace to output down
 
+# Screenshot
+bindsym $mod+Shift+p exec --no-startup-id flameshot gui
 
 ############
 # Resizing #
