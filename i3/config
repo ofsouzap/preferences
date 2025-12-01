@@ -206,6 +206,9 @@ bindsym $mod+Ctrl+Down move workspace to output down
 # Screenshot
 bindsym $mod+Shift+p exec --no-startup-id flameshot gui
 
+# Open ChatGPT
+bindsym $mod+c exec --no-startup-id /opt/google/chrome/google-chrome --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg
+
 ############
 # Resizing #
 ############
