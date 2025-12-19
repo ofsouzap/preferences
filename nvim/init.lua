@@ -1,3 +1,18 @@
+-- Reconfigure navigation keys
+
+local modes = { 'n', 'v', 'o' }
+
+vim.keymap.set(modes, 'j', 'h')
+vim.keymap.set(modes, 'k', 'j')
+vim.keymap.set(modes, 'l', 'k')
+vim.keymap.set(modes, ';', 'l')
+
+-- Disable original hjkl to avoid accidental use
+vim.keymap.set('n', 'h', '<nop>')
+vim.keymap.set('n', 'J', '<nop>')
+vim.keymap.set('n', 'K', '<nop>')
+vim.keymap.set('n', 'L', '<nop>')
+
 -- Color scheme
 vim.cmd("colorscheme slate")
 vim.cmd("highlight MatchParen guifg=#d7d787 guibg=#333333")
