@@ -195,9 +195,9 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # move workspace to output
 bindsym $mod+Ctrl+j move workspace to output left
-bindsym $mod+Ctrl+k move workspace to output right
+bindsym $mod+Ctrl+semicolon move workspace to output right
 bindsym $mod+Ctrl+l move workspace to output up
-bindsym $mod+Ctrl+semicolon move workspace to output down
+bindsym $mod+Ctrl+k move workspace to output down
 bindsym $mod+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Up move workspace to output up
