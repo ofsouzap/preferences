@@ -13,6 +13,23 @@ vim.keymap.set('n', 'J', '<nop>')
 vim.keymap.set('n', 'K', '<nop>')
 vim.keymap.set('n', 'L', '<nop>')
 
+-- Reconfigure window navigation keys (<C-w>...)
+local wmap = function(lhs, rhs)
+  vim.keymap.set('n', lhs, rhs, { noremap = true, silent = true })
+end
+
+-- <C-w> + direction
+wmap('<C-w>j', '<C-w>h') -- j = left
+wmap('<C-w>k', '<C-w>j') -- k = down
+wmap('<C-w>l', '<C-w>k') -- l = up
+wmap('<C-w>;', '<C-w>l') -- ; = right
+
+-- Also support <C-w><C-h/j/k/l> variants (some people use these)
+wmap('<C-w><C-j>', '<C-w><C-h>')
+wmap('<C-w><C-k>', '<C-w><C-j>')
+wmap('<C-w><C-l>', '<C-w><C-k>')
+wmap('<C-w><C-;>', '<C-w><C-l>')
+
 -- Color scheme
 vim.cmd("colorscheme slate")
 vim.cmd("highlight MatchParen guifg=#d7d787 guibg=#333333")
