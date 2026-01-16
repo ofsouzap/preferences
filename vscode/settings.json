@@ -217,5 +217,8 @@
     },
     "terminal.integrated.inheritEnv": false,
     "git.blame.editorDecoration.enabled": true,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "files.associations": {
+        "*.mll": "ocamllex"
+    }
 }
