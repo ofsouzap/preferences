@@ -209,18 +209,6 @@ bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Up move workspace to output up
 bindsym $mod+Ctrl+Down move workspace to output down
 
-##############
-# Scratchpad #
-##############
-
-
-# Controls
-
-bindsym $mod+s scratchpad show
-
-# Automatic scratchpad apps
-for_window [class="Spotify"] move scratchpad
-
 
 ############
 # Resizing #
