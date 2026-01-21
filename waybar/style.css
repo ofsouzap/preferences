@@ -22,3 +22,12 @@ window#waybar {
   padding: 0 10px;
 }
 
+#custom-capslock.indicator-off, #custom-numlock.indicator-off {
+  color: #444444;  /* darker, muted color */
+}
+
+#custom-capslock.indicator-on, #custom-numlock.indicator-on {
+  color: #00c853; /* green */
+  font-weight: bold;
+}
+

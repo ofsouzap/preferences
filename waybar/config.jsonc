@@ -17,6 +17,8 @@
     "custom/volume",
     "custom/brightness",
     "battery",
+    "custom/capslock",
+    "custom/numlock",
     "custom/kblayout",
     "custom/weather",
     "clock",
@@ -31,7 +33,21 @@
     "signal": 12
   },
 
-  // TODO - CAPS lock and NUM lock indicators. Use colors, preferably. Use signal 11
+  "custom/capslock": {
+    "format": "{} |",
+    "exec": "$HOME/.config/waybar/custom-scripts/kb-indicators capslock",
+    "return-type": "json",
+    "interval": 5,
+    "signal": 11
+  },
+
+  "custom/numlock": {
+    "format": "{} |",
+    "exec": "$HOME/.config/waybar/custom-scripts/kb-indicators numlock",
+    "return-type": "json",
+    "interval": 5,
+    "signal": 11
+  },
 
   "custom/volume": {
     "format": "🔈 {} |",
