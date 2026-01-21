@@ -56,9 +56,9 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 waybar
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 waybar
 
 
-####################
-### Keybindiings ###
-####################
+###################
+### Keybindings ###
+###################
 
 
 # Basics
@@ -94,13 +94,19 @@ bindsym $mod+n exec "google-chrome"
 # Display layout selector
 bindsym $mod+Shift+d exec "$HOME/.config/sway/scripts/display-layout-selector.sh"
 
+# Screenshot
+bindsym $mod+Shift+p exec "$HOME/.config/sway/scripts/screenshot-area.sh"
+
+# Open ChatGPT
+bindsym $mod+c exec --no-startup-id /opt/google/chrome/google-chrome --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg
+
 # Navigation, containers and workspaces
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -109,10 +115,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -144,7 +150,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-# bindsym $mod+d focus child
+bindsym $mod+shift+a focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -184,14 +190,27 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # move workspace to output
-bindsym $mod+Ctrl+h move workspace to output left
-bindsym $mod+Ctrl+l move workspace to output right
-bindsym $mod+Ctrl+k move workspace to output up
-bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+j move workspace to output left
+bindsym $mod+Ctrl+semicolon move workspace to output right
+bindsym $mod+Ctrl+l move workspace to output up
+bindsym $mod+Ctrl+k move workspace to output down
 bindsym $mod+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Up move workspace to output up
 bindsym $mod+Ctrl+Down move workspace to output down
+
+
+##############
+# Scratchpad #
+##############
+
+
+# Controls
+
+bindsym $mod+s scratchpad show
+
+# Automatic scratchpad apps
+for_window [class="Spotify"] move scratchpad
 
 
 ############

@@ -5,9 +5,6 @@ choice=$(printf "Monitor (Home)\nLaptop (Normal)\nLaptop (x1.5)\nLaptop (x2)\n" 
 case "$choice" in
     "Monitor (Home)")
         "$HOME/.config/sway/screenlayouts/monitor-home.sh"
-        swaymsg "workspace 1; move workspace to output HDMI-A-1"
-        swaymsg "workspace 2; move workspace to output eDP-1"
-        swaymsg "workspace 1; focus"
         ;;
     "Laptop (Normal)")
         "$HOME/.config/sway/screenlayouts/laptop-only.sh"
