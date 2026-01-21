@@ -15,18 +15,30 @@
   "modules-right": [
     "custom/mediaplayer",
     "custom/volume",
+    "custom/separator",
     "custom/brightness",
+    "custom/separator",
     "battery",
+    "custom/separator",
     "custom/capslock",
+    "custom/separator",
     "custom/numlock",
+    "custom/separator",
     "custom/kblayout",
+    "custom/separator",
     "custom/weather",
+    "custom/separator",
     "clock",
     "tray"
   ],
 
+  "custom/separator": {
+    "format": "|",
+    "interval": "once"
+  },
+
   "custom/mediaplayer": {
-    "format": "{} |",
+    "format": "{}",
     "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
     "interval": 5,
     "on-click": "playerctl play-pause",
@@ -34,7 +46,7 @@
   },
 
   "custom/capslock": {
-    "format": "{} |",
+    "format": "{}",
     "exec": "$HOME/.config/waybar/custom-scripts/kb-indicators capslock",
     "return-type": "json",
     "interval": 5,
@@ -42,7 +54,7 @@
   },
 
   "custom/numlock": {
-    "format": "{} |",
+    "format": "{}",
     "exec": "$HOME/.config/waybar/custom-scripts/kb-indicators numlock",
     "return-type": "json",
     "interval": 5,
@@ -50,29 +62,29 @@
   },
 
   "custom/volume": {
-    "format": "🔈 {} |",
+    "format": "🔈 {}",
     "exec": "$HOME/.config/waybar/custom-scripts/volume",
     "interval": 1,
     "signal": 10
   },
 
   "custom/brightness": {
-    "format": "🔅 {} |",
+    "format": "🔅 {}",
     "exec": "$HOME/.config/waybar/custom-scripts/brightness",
     "interval": 2,
     "signal": 13
   },
 
   "battery": {
-    "format": "{icon}  {capacity}% ({time}) |",
-    "format-full": "{icon}  full |",
-    "format-charging": "{icon}  {capacity}% (⚡ {time}) |",
+    "format": "{icon}  {capacity}% ({time})",
+    "format-full": "{icon}  full",
+    "format-charging": "{icon}  {capacity}% (⚡ {time})",
     "format-icons": ["", "", "", "", ""],
     "format-time": "{H}h{m}m"
   },
 
   "custom/kblayout": {
-    "format": "{} |",
+    "format": "{}",
     "exec": "$HOME/.config/waybar/custom-scripts/kblayout",
     "interval": 5,
     "on-click": "$HOME/.config/waybar/custom-scripts/kblayout cycle",
@@ -80,7 +92,7 @@
   },
 
   "custom/weather": {
-    "format": "{} |",
+    "format": "{}",
     "exec": "$HOME/.config/waybar/custom-scripts/weather",
     "interval": 300
   },
