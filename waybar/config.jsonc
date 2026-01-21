@@ -34,16 +34,16 @@
   // TODO - CAPS lock and NUM lock indicators. Use colors, preferably. Use signal 11
 
   "custom/volume": {
-    "exec": "~/.config/waybar/custom-scripts/volume",
-    "interval": 1,
     "format": "🔈 {} |",
+    "exec": "$HOME/.config/waybar/custom-scripts/volume",
+    "interval": 1,
     "signal": 10
   },
 
   "custom/brightness": {
-    "exec": "~/.config/waybar/custom-scripts/brightness",
-    "interval": 2,
     "format": "🔅 {} |",
+    "exec": "$HOME/.config/waybar/custom-scripts/brightness",
+    "interval": 2,
     "signal": 13
   },
 
@@ -57,15 +57,15 @@
 
   "custom/kblayout": {
     "format": "{} |",
-    "exec": "~/.config/waybar/custom-scripts/kblayout",
+    "exec": "$HOME/.config/waybar/custom-scripts/kblayout",
     "interval": 5,
-    "on-click": "~/.config/waybar/custom-scripts/kblayout cycle",
+    "on-click": "$HOME/.config/waybar/custom-scripts/kblayout cycle",
     "signal": 14
   },
 
   "custom/weather": {
     "format": "{} |",
-    "exec": "~/.config/waybar/custom-scripts/weather",
+    "exec": "$HOME/.config/waybar/custom-scripts/weather",
     "interval": 300
   },
 
