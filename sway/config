@@ -69,8 +69,8 @@ bindsym $mod+Return exec $terminal_command
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi (a program launcher)
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
+# start program launcher
+bindsym $mod+d exec "fuzzel"
 
 # reload the configuration file
 bindsym $mod+Shift+c exec "swaymsg reload; pkill -SIGUSR2 waybar"
