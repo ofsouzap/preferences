@@ -1,3 +1,5 @@
+alias ll='ls -al'
+
 alias rup='rustup'
 alias swipl='swi-prolog.swipl'
 alias vim='nvim'

@@ -1,3 +1,9 @@
+# Make sure electron apps (e.g. VSCode) use wayland, not XWayland
+if [ "$XDG_SESSION_TYPE" = "wayland" ]
+then
+    export ELECTRON_OZONE_PLATFORM_HINT=wayland
+fi
+
 # fzf keybindings
 FZF_KEYBINDINGS_FILE="/usr/share/doc/fzf/examples/key-bindings.bash"
 if [ -f "$FZF_KEYBINDINGS_FILE" ]
