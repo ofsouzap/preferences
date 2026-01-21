@@ -1,0 +1,7 @@
+# fzf keybindings
+FZF_KEYBINDINGS_FILE="/usr/share/doc/fzf/examples/key-bindings.bash"
+if [ -f "$FZF_KEYBINDINGS_FILE" ]
+then
+    source "$FZF_KEYBINDINGS_FILE"
+fi
+
