@@ -4,8 +4,12 @@ then
     export ELECTRON_OZONE_PLATFORM_HINT=wayland
 fi
 
-# fzf keybindings
+# fzf keybindings and setup
+
+export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border"
+
 FZF_KEYBINDINGS_FILE="/usr/share/doc/fzf/examples/key-bindings.bash"
+
 if [ -f "$FZF_KEYBINDINGS_FILE" ]
 then
     source "$FZF_KEYBINDINGS_FILE"
