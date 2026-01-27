@@ -100,6 +100,9 @@ bindsym $mod+Shift+p exec "$HOME/.config/sway/scripts/screenshot-area.sh"
 # Open ChatGPT
 bindsym $mod+c exec --no-startup-id /opt/google/chrome/google-chrome --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg
 
+# Quick actions (custom script)
+bindsym $mod+Shift+f exec "$HOME/.config/sway/scripts/quick-actions.sh"
+
 # Navigation, containers and workspaces
 
 # change focus
